@@ -13,6 +13,25 @@ $ docker exec -it lara-min-app laravel new
 $ docker stop $(docker ps -q) && docker rm $(docker ps -q -a) && docker rmi $(docker images -q)
 ```
 
+## Migration
+- .envを書き換え
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=database
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+- migrateを実行
+```
+$ docker exec -it lara-min-app php artisan migrate:fresh --seed
+```
+- migrateに失敗するなら
+```
+$ docker exec -it lara-min-app composer dump-autoload
+```
+
 ## Access
 ```
 $ docker exec -it lara-min-app php artisan serve
