@@ -35,13 +35,15 @@ $ docker exec -it lara-min-app composer dump-autoload
 ## Access To PHPMYADMIN
 - localhost:8888にアクセス
 
+|項目名|値|
+|----|-------------|
+|user_name|root|
+|password|root|
 ## Access To APP
 ```
 $ docker exec -it lara-min-app php artisan serve
 ```
 - localhost:8080portアクセス
-- user_name: root
-- password: root
 
 ```
 |*****************************************|
