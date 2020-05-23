@@ -37,6 +37,10 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: lara-min-phpmyadmin
+    environment: 
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=root
     ports:
       - 8888:80
     depends_on:
