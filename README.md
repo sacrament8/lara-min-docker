@@ -32,11 +32,16 @@ $ docker exec -it lara-min-app php artisan migrate:fresh --seed
 $ docker exec -it lara-min-app composer dump-autoload
 ```
 
-## Access
+## Access To PHPMYADMIN
+- localhost:8888にアクセス
+
+## Access To APP
 ```
 $ docker exec -it lara-min-app php artisan serve
 ```
-- localhostの8080portに接続
+- localhost:8080portアクセス
+- user_name: root
+- password: root
 
 ```
 |*****************************************|
